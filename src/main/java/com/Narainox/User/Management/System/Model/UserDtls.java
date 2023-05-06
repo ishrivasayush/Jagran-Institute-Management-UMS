@@ -21,11 +21,10 @@ public class UserDtls {
 
     private String address;
 
-    private String qualification;
+    private String role;
 
     private String password;
 
-    private String role;
     private String mobileNumber;
 
 }

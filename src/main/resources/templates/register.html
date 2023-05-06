@@ -3,7 +3,7 @@
       th:replace="base::layout(~{::section})">
 <head>
     <meta charset="ISO-8859-1">
-    <title>Insert title here</title>
+    <title>Jagran Institue Of Management</title>
 
 </head>
 <body>
@@ -13,7 +13,7 @@
         <div class="row">
             <div class="col-md-6 offset-md-3">
                 <div class="card">
-                    <div class="card-header text-center fs-4">Register Page</div>
+                    <div class="card-header text-center fs-4 bg-primary">Register Page</div>
 
                     <th:block th:if="${session.msg}">
                         <p class="text-center fs-4 text-success">[[${session.msg}]]</p>
@@ -32,7 +32,7 @@
                                                                   class="form-control">
                             </div>
                             <div class="mb-3">
-                                <label>Enter Mobile Number</label> <input type="Number" name="email"
+                                <label>Enter Mobile Number</label> <input type="Number" name="mobileNumber"
                                                                   class="form-control">
                             </div>
 
@@ -41,8 +41,7 @@
                                                                     class="form-control">
                             </div>
                             <div class="mb-3">
-                                <label>Enter Qualification</label> <input type="text"
-                                                                          name="qualification" class="form-control">
+                                <label>Enter Role</label> <input type="text" name="role" class="form-control">
                             </div>
                             <div class="mb-3">
                                 <label>Enter Password</label> <input type="text"
