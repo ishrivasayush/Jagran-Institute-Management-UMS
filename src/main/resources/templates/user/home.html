@@ -1,14 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      th:replace="base::layout(~{::section})">
 <head>
   <meta charset="ISO-8859-1">
   <title>Jagran Institute of Management</title>
+
 </head>
 <body>
-<h1>User After Login: Home Page</h1>
-<a href="/logout">Logout</a>
-<h1>Name : [[${user.fullName}]]</h1>
-<h1>Email : [[${user.email}]]</h1>
-<h1>Role : [[${user.role}]]</h1>
+<section>
+
+<!--  <h1>Name : [[${user.fullName}]]</h1>-->
+<!--  <h1>Email : [[${user.email}]]</h1>-->
+<!--  <br>-->
+<!--  <button><a href="/logout">Logout</a></button>-->
+  <div class="progress">
+    <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 100%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+  <div class="progress">
+    <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 100%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+  <br>
+  <br>
+  <div class="card" style="width: 30rem;">
+    <div class="card-body">
+      <h5 class="card-title">Profile</h5>
+      <h6 class="card-subtitle mb-2 text-muted">[[${user.fullName}]]</h6>
+      <h3>Name : [[${user.fullName}]]</h3>
+      <h3>Email : [[${user.email}]]</h3>
+<!--      <button><a href="/logout">Logout</a></button>-->
+      <br>
+<!--      </form>-->
+<!--      <div class="text-center mt-2">-->
+<!--        <a href="/loadForgotPassword" class="text_decoration-none fs-5">Forgot Password?</a>-->
+<!--      </div>-->
+      <div class="flex justify-center">
+        <button class="inline-flex text-black bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg btn btn-dark"><a href="/logout">Logout</a></button>
+      </div>
+      <br>
+      <div class="flex justify-center">
+        <button class="inline-flex text-black bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg btn btn-dark"><a href="/loadForgotPassword">Forgot Password</a></button>
+      </div>
+    </div>
+  </div>
+
+</section>
 </body>
 </html>
