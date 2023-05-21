@@ -11,6 +11,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.security.Principal;
+
 
 @Controller
 public class HomeController {
@@ -23,6 +25,20 @@ public class HomeController {
 
     @Autowired
     private UserRepository userRepository;
+
+    @Autowired
+    private UserRepository userRepo;
+
+    @ModelAttribute
+    private void userDetails(Model m, Principal p) {
+        if (p!=null)
+        {
+            String email=p.getName();
+            UserDtls user=userRepo.findByEmail(email);
+            m.addAttribute("user",user);
+        }
+
+    }
 
     @GetMapping("/")
     public String index() {

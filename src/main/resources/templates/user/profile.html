@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      th:replace="base::layout(~{::section})">
+<head>
+  <meta charset="ISO-8859-1">
+  <title>Jagran Institute of Management</title>
+
+</head>
+<body>
+<section>
+
+  <!--  <h1>Name : [[${user.fullName}]]</h1>-->
+  <!--  <h1>Email : [[${user.email}]]</h1>-->
+  <!--  <br>-->
+  <!--  <button><a href="/logout">Logout</a></button>-->
+  <div class="progress">
+    <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 100%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+
+  <br>
+  <br>
+  <div class="card" style="width: 30rem;">
+    <div class="card-body">
+      <h5 class="card-title">Profile</h5>
+      <h6 class="card-subtitle mb-2 text-muted">[[${user.fullName}]]</h6>
+      <h2>Name : 02k23JIM00[[${user.id}]]</h2>
+      <h2>Name : [[${user.fullName}]]</h2>
+      <h2>Email : [[${user.email}]]</h2>
+      <h2>Address : [[${user.address}]]</h2>
+      <h2>Contact No : [[${user.mobileNumber}]]</h2>
+    </div>
+  </div>
+</section>
+</body>
+</html>
